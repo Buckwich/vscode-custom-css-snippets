@@ -27,4 +27,5 @@ This repository aims to provide a shared list of possible CSS customization of V
 ```
 
 It is possible to combine multiple effects, for example the three files above result in the following (tab with unsaved changes):
+
 ![Example of combined snippets](./combined-example.png)
