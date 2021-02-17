@@ -5,7 +5,7 @@
   .editor-group-container
   > .title
   .tabs-container
-  > .tab.sizing-fit.active::after {
+  > .tab.active::after {
   content: "";
   position: absolute;
   bottom: -1px;
