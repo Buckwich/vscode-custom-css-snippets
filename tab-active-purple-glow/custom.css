@@ -1,4 +1,5 @@
-.monaco-workbench
+/* Classic tabs */
+.monaco-workbench:not(.modern-ui-tabs)
   .part.editor
   > .content
   .editor-group-container
@@ -7,4 +8,13 @@
   > .tab.active {
   box-shadow: inset 0 -5px 25px #ff009994;
   position: relative;
+}
+
+/* Modern UI tabs paint their background on .tab-fill */
+.monaco-workbench.modern-ui-tabs
+  .part.editor
+  .tabs-container
+  > .tab.active
+  > .tab-fill {
+  box-shadow: inset 0 -5px 25px #ff009994 !important;
 }
