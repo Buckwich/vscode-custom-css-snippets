@@ -1,5 +1,5 @@
-/* Active tab stripe */
-.monaco-workbench
+/* Active tab stripe, classic tabs */
+.monaco-workbench:not(.modern-ui-tabs)
   .part.editor
   > .content
   .editor-group-container
@@ -20,4 +20,27 @@
   ) !important;
   opacity: 1;
   z-index: 6;
+}
+
+/* Active tab stripe, modern UI tabs. On the tab itself, because VS Code
+   hides the active tab's .tab-fill and uses its pseudo-elements for corners. */
+.monaco-workbench.modern-ui-tabs
+  .part.editor
+  .tabs-container
+  > .tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--vscode-spacing-size20, 2px);
+  right: var(--vscode-spacing-size20, 2px);
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  ) !important;
+  opacity: 1;
+  z-index: 6;
+  pointer-events: none;
 }
